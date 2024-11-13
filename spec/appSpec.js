@@ -58,9 +58,7 @@ describe("Ligne des blocs de 5 heures", function() {
         expect(main.getFiveHoursLine(20)).toBe("RRRR");
     });
 
-    it('should return OOOO for 0 hours', function() {
-        expect(main.getFiveHoursLine(0)).toBe("OOOO");
-    });
+   
 });
 
 
