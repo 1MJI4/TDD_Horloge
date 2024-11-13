@@ -1,6 +1,6 @@
 import { Main } from '../src/app.js';
 
-describe("doit retourner YYOO", function() {
+describe("Ligne des simples minutes", function() {
     const main = new Main();
 
     it('should return YYOO for 32 minutes', function() {
@@ -30,8 +30,9 @@ describe("Ligne des blocs de 5 minutes", function() {
     it('should return OOOOOOOOOOO for 0 minutes', function() {
         expect(main.getFiveMinutesLine(0)).toBe("OOOOOOOOOOO");
     });
-    
 });
+
+
 describe("Ligne des heures simples", function() {
     const main = new Main();
 
@@ -42,5 +43,40 @@ describe("Ligne des heures simples", function() {
     it('should return RROO for 2 hours', function() {
         expect(main.getSimpleHoursLine(2)).toBe("RROO");
     });
+});
 
+
+
+describe("Ligne des blocs de 5 heures", function() {
+    const main = new Main();
+
+    it('should return RROO for 10 hours', function() {
+        expect(main.getFiveHoursLine(9)).toBe("RROO");
+    });
+
+    it('should return RRRR for 20 hours', function() {
+        expect(main.getFiveHoursLine(20)).toBe("RRRR");
+    });
+
+    it('should return OOOO for 0 hours', function() {
+        expect(main.getFiveHoursLine(0)).toBe("OOOO");
+    });
+});
+
+
+
+describe("Lampe des secondes", function() {
+    const main = new Main();
+
+    it('should return Y for 0 seconds (even)', function() {
+        expect(main.getSecondsLamp(0)).toBe("Y");
+    });
+
+    it('should return O for 1 second (odd)', function() {
+        expect(main.getSecondsLamp(1)).toBe("O");
+    });
+
+    it('should return Y for 2 seconds (even)', function() {
+        expect(main.getSecondsLamp(2)).toBe("Y");
+    });
 });
