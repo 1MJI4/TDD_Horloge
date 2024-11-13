@@ -26,8 +26,15 @@ export class Main {
 
     getFiveHoursLine(hours) {
         const fiveHoursBlocks = Math.floor(hours / 5);
-        return "R".repeat(fiveHoursBlocks) + "O".repeat(4 - fiveHoursBlocks);
+        let result = "";
+    
+        for (let i = 0; i < 4; i++) {
+            result += (i < fiveHoursBlocks) ? "R" : "O";
+        }
+    
+        return result;
     }
+    
 
     getSecondsLamp(seconds) {
         return (seconds % 2 === 0) ? "Y" : "O";
