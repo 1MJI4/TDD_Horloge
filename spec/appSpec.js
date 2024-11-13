@@ -51,7 +51,7 @@ describe("Ligne des blocs de 5 heures", function() {
     const main = new Main();
 
     it('should return RROO for 10 hours', function() {
-        expect(main.getFiveHoursLine(9)).toBe("RROO");
+        expect(main.getFiveHoursLine(10)).toBe("RROO");
     });
 
     it('should return RRRR for 20 hours', function() {
