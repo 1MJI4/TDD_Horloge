@@ -19,4 +19,8 @@ getFiveMinutesLine(minutes) {
     
     return result;
 }
+getSimpleHoursLine(hours) {
+    const simpleHours = hours % 5;
+    return "R".repeat(simpleHours) + "O".repeat(4 - simpleHours);
+}
 }

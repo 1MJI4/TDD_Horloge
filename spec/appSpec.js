@@ -30,4 +30,17 @@ describe("Ligne des blocs de 5 minutes", function() {
     it('should return OOOOOOOOOOO for 0 minutes', function() {
         expect(main.getFiveMinutesLine(0)).toBe("OOOOOOOOOOO");
     });
+    
+});
+describe("Ligne des heures simples", function() {
+    const main = new Main();
+
+    it('should return ROOO for 1 hour', function() {
+        expect(main.getSimpleHoursLine(1)).toBe("ROOO");
+    });
+
+    it('should return RROO for 2 hours', function() {
+        expect(main.getSimpleHoursLine(2)).toBe("RROO");
+    });
+
 });
