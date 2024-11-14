@@ -39,4 +39,15 @@ export class Main {
     getSecondsLamp(seconds) {
         return (seconds % 2 === 0) ? "Y" : "O";
     }
+
+    getFullClock(hours, minutes, seconds) {
+        const secondsLamp = this.getSecondsLamp(seconds);
+        const fiveHoursLine = this.getFiveHoursLine(hours);
+        const simpleHoursLine = this.getSimpleHoursLine(hours);
+        const fiveMinutesLine = this.getFiveMinutesLine(minutes);
+        const simpleMinutesLine = this.getSimpleMinutesLine(minutes);
+        
+        // Affichage de l'horloge
+        return `${secondsLamp}\n${fiveHoursLine}\n${simpleHoursLine}\n${fiveMinutesLine}\n${simpleMinutesLine}`;
+    }
 }
