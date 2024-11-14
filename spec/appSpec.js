@@ -78,3 +78,18 @@ describe("Lampe des secondes", function() {
         expect(main.getSecondsLamp(2)).toBe("Y");
     });
 });
+
+describe("Horloge complète", function() {
+    const main = new Main();
+
+    it('should display the full clock for 12:32:00', function() {
+        const result = main.getFullClock(12, 32, 0);
+        expect(result).toBe("Y\nRROO\nRROO\nYYRYYROOOOO\nYYOO");
+    });
+
+    it('should display the full clock for 23:59:59', function() {
+        const result = main.getFullClock(23, 59, 59);
+        expect(result).toBe("O\nRRRR\nRRRO\nYYRYYRYYRYY\nYYYY");
+    });
+
+});
