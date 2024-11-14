@@ -1,6 +1,7 @@
 # TDD_Horloge
 
 Ce projet implémente une version de l'horloge de Berlin en JavaScript, avec une méthodologie TDD et une structuration des fonctionnalités en plusieurs lignes de lampes pour représenter les heures, minutes, et secondes.
+
 # Table des matières
 
     Description
