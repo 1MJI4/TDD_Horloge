@@ -1,6 +1,6 @@
 import { Main } from "../src/app.js";
 
-describe("Ligne des simples minutes", function () {
+describe("Simple minute line", function () {
     const main = new Main();
 
     it("should return YYOO for 32 minutes", function () {
@@ -12,7 +12,7 @@ describe("Ligne des simples minutes", function () {
     });
 });
 
-describe("Ligne des blocs de 5 minutes", function () {
+describe("5 minute block line", function () {
     const main = new Main();
 
     it("should return YYYOOOOOOOO for 15 minutes", function () {
@@ -32,7 +32,7 @@ describe("Ligne des blocs de 5 minutes", function () {
     });
 });
 
-describe("Ligne des heures simples", function () {
+describe("Simple hour line", function () {
     const main = new Main();
 
     it("should return ROOO for 1 hour", function () {
@@ -44,7 +44,7 @@ describe("Ligne des heures simples", function () {
     });
 });
 
-describe("Ligne des blocs de 5 heures", function () {
+describe("5 hour block line", function () {
     const main = new Main();
 
     it("should return RROO for 10 hours", function () {
@@ -56,7 +56,7 @@ describe("Ligne des blocs de 5 heures", function () {
     });
 });
 
-describe("Lampe des secondes", function () {
+describe("Seconds lamp", function () {
     const main = new Main();
 
     it("should return Y for 0 seconds (even)", function () {
@@ -72,7 +72,7 @@ describe("Lampe des secondes", function () {
     });
 });
 
-describe("Horloge complète", function () {
+describe("Complete clock", function () {
     const main = new Main();
 
     it("should display the full clock for 12:32:00", function () {
